@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_banners",
+  "info": {
+    "name": "homeBanner"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "fullImageUrl": {
+      "type": "string"
+    },
+    "overlayImageUrl": {
+      "type": "string"
+    }
+  }
+}

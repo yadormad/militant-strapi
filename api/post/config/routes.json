@@ -2,7 +2,7 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/posts",
+      "path": "/post/list",
       "handler": "post.find",
       "config": {
         "policies": []
@@ -18,7 +18,7 @@
     },
     {
       "method": "GET",
-      "path": "/posts/:id",
+      "path": "/post/:id",
       "handler": "post.findOne",
       "config": {
         "policies": []
