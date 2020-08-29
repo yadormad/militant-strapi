@@ -12,15 +12,15 @@ module.exports = {
             console.log(params);
             data.forEach(post => {
                 post.image = {
-                    fullImageUrl: `${post.image.url}`,
-                    overlayImageUrl: `${post.image.formats.thumbnail.url}`,
+                    fullImageUrl: `${post.image && post.image.url}`,
+                    overlayImageUrl: `${post.image && post.image.formats.thumbnail.url}`,
                 }
             });
         },
         afterFindOne(post) {
             post.image = {
-                fullImageUrl: `${post.image.url}`,
-                overlayImageUrl: `${post.image.formats.thumbnail.url}`,
+                fullImageUrl: `${post.image && post.image.url}`,
+                overlayImageUrl: `${post.image && post.image.formats.thumbnail.url}`,
             }
         },
     },

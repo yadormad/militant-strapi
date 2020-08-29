@@ -8,8 +8,8 @@
 module.exports = {
     lifecycles: {
         afterFind([data]) {
-            data.fullImageUrl = `${data.image.url}`;
-            data.overlayImageUrl = `${data.image.formats.thumbnail.url}`;
+            data.fullImageUrl = `${data.image && data.image.url}`;
+            data.overlayImageUrl = `${data.image && data.image.formats.thumbnail.url}`;
         },
     },
 };
