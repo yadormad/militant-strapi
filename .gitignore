@@ -109,3 +109,6 @@ exports
 .cache
 build
 package-lock.json
+
+*.db
+.tmp
